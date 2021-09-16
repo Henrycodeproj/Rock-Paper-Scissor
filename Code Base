@@ -1,0 +1,20 @@
+import random
+
+answer = input("Please choose rock, paper, or scissor.\n\n")
+
+output = ["rock", "paper", "scissors"]
+compchoice = random.choice(output)
+print("\n" + compchoice + "\n")
+if answer == compchoice:
+    print("\nYour choice of %s tied with the computer.\n\n" % (answer))
+else:
+    if answer == 'rock' and compchoice =='scissors':
+      print("Congratulations you beat the computer, rock beats scissors!\n\n")
+    else:
+      if answer == 'paper' and compchoice == 'rock':
+        print("Congratulations you beat the computer, paper beats rock!\n\n")
+      else:
+        if answer == 'scissor' and compchoice == 'paper':
+          print("Congratulations you beat the computer, scissor beats paper!\n\n")
+        else:
+          print("Unfortunately, you have lost to the computer.\n\n")
